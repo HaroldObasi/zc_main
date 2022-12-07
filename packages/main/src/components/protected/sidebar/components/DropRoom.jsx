@@ -19,7 +19,6 @@ const DropRoom = props => {
   const [getCurrentworkspace, setGetCurrentWorkspace] = useState(
     () => JSON.parse(sessionStorage.getItem("organisations"))[0]
   );
-
   const [formState, setFromState] = useState({
     description: "",
     name: "",
@@ -27,9 +26,7 @@ const DropRoom = props => {
     share: false,
     type: "CHANNEL"
   });
-
   const { description, name, makeChannelPrivate, share } = formState;
-
   const handleOnChange = (e, type) => {
     setFromState({
       ...formState,
@@ -37,11 +34,8 @@ const DropRoom = props => {
     });
     // console.log(e.target.value);
   };
-
   const org_id = getCurrentworkspace.id;
-
   const room_id = sessionStorage.getItem("currentRoom");
-
   useEffect(() => {
     async function handleFetchAwait() {
       let response = await fetch(
@@ -50,28 +44,23 @@ const DropRoom = props => {
       let data = await response.json();
       return data;
     }
-
     handleFetchAwait().then(data => {
       console.log(data);
       setRoomMembers(data.data);
     });
   }, []);
-
   const createChannel = e => {
     setIsCreating(true);
     e.preventDefault();
     const member_id = getCurrentworkspace.member_id;
-
     formState.is_private = formState.makeChannelPrivate;
     formState.room_type = formState.type;
     formState.room_name = formState.name;
     formState.room_members = roomMembers;
-
     delete formState.makeChannelPrivate;
     delete formState.share;
     delete formState.type;
     delete formState.name;
-
     const requestOptions = {
       method: "POST",
       headers: {
@@ -81,7 +70,6 @@ const DropRoom = props => {
       body: JSON.stringify(formState),
       mode: "cors"
     };
-
     fetch(
       `https://chat.zuri.chat/api/v1/org/${org_id}/members/${member_id}/rooms`,
       requestOptions
@@ -189,7 +177,7 @@ const DropRoom = props => {
                 <div className="text-center">
                   <div
                     className="spinner-border"
-                    style={{ width: "3rem", height: "3rem", color: "#7ed5af" }}
+                    style={{ width: "3rem", height: "3rem", color: "#7ED5AF" }}
                     role="status"
                   >
                     <span className="visually-hidden">Loading...</span>
@@ -214,5 +202,4 @@ const DropRoom = props => {
     ""
   );
 };
-
 export default DropRoom;
