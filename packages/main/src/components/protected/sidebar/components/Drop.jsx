@@ -13,6 +13,18 @@ const DropDown = ({ categoryName, isOpen, toggleDropdown, button_url }) => {
   const [roomId, setRoomId] = useState(false);
   const [options, setOptions] = useState(false);
   const [newRoom, setNewRoom] = useState(false);
+
+  const [roomModalControl, setNewModalControl] = useState({
+    inEffect: false,
+    caller: ""
+  });
+
+  const triggerRoomModalControl = name =>
+    setNewModalControl({
+      inEffect: true,
+      caller: name
+    });
+
   const popup = () => setOptions(!options);
   const room = () => setNewRoom(!newRoom);
   const { t } = useTranslation();
@@ -21,7 +33,20 @@ const DropDown = ({ categoryName, isOpen, toggleDropdown, button_url }) => {
     <div
       className={`row ${styles.dropDown} align-items-center text-decoration-none `}
     >
-      {newRoom ? <DropRoom trigger={newRoom} setTrigger={setNewRoom} /> : ""}
+      {roomModalControl.inEffect ? (
+        <DropRoom
+          trigger={roomModalControl}
+          setTrigger={setNewModalControl}
+          categoryName={roomModalControl.caller}
+        />
+      ) : (
+        // <DropRoom
+        //   trigger={newRoom}
+        //   setTrigger={setNewRoom}
+        //   categoryName={roomModalControl.caller}
+        // />
+        <></>
+      )}
 
       <div
         className={`col-12 w-100 d-flex align-items-center justify-content-between ${styles.plugin__title}`}
@@ -43,9 +68,17 @@ const DropDown = ({ categoryName, isOpen, toggleDropdown, button_url }) => {
             <>
               <div className={`${styles.dropdown__menu}`}>
                 <a href={button_url} onClick={navigateToUrl}>
-                  <p>Browse Channels</p>
+                  <p>Browse {categoryName}</p>
                 </a>
-                <p onClick={room}>Create a Channel</p>
+                <p
+                  onClick={() => {
+                    triggerRoomModalControl(categoryName);
+                    console.log(roomModalControl);
+                  }}
+                >
+                  Testing Create a {categoryName}
+                </p>
+                {/* <p onClick={room}>Create a {categoryName}</p> */}
               </div>
             </>
           ) : (
