@@ -803,7 +803,7 @@ export const TRANSLATIONS_EN = {
     text_wrap7_p:
       "Hit a snag? Got a question? Our 24/7 Help Team will take extra steps and walk extra miles to ensure you have an easy and pleasant experience with Zuri Chat.",
     bottom_card: "Your Team would definitely love",
-    bottom_link: "Sign Up Now!"
+    bottom_link: "Sign In"
   },
 
   //search
