@@ -71,10 +71,10 @@ export default [
   },
   {
     key: "LoginsubmitButtonName",
-    en: "Log in",
+    en: "Login",
     de: "Anmelden",
     nl: "Inloggen",
-    engb: "Log in",
+    engb: "Login",
     fr: "Connectez-vous",
     zh: "登录",
     ar: "تسجيل الدخول",
