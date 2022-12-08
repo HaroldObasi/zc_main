@@ -85,10 +85,10 @@ export default [
   },
   {
     key: "logInbottomLine",
-    en: "New to us?",
+    en: "Do not have an account?",
     de: "Neu bei uns?",
     nl: "Nieuw bij ons?",
-    engb: "New to us?",
+    engb: "Do not have an account?",
     fr: "Nouveau pour nous ?",
     zh: "新来的？",
     ar: "هل أنت جديد علينا؟",

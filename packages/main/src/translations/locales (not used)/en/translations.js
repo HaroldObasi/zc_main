@@ -480,7 +480,7 @@ export const TRANSLATIONS_EN = {
         google_header: "Login with Google",
         topline_text: "OR",
         submitButtonName: "Log in",
-        bottomLine: "New to us?",
+        bottomLine: "Do not have an account?",
         bottomLink: "Create an Account",
         signUp: "Signup",
         authInputBox: {
