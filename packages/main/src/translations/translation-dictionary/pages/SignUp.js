@@ -141,10 +141,10 @@ export default [
   },
   {
     key: "email_address_placeholder",
-    en: "Enter you email address",
+    en: "Enter your email address",
     de: "Geben Sie Ihre E-Mail Adresse ein",
     nl: "Voer uw e-mailadres in",
-    engb: "Enter you email address",
+    engb: "Enter your email address",
     fr: "Entrez votre adresse e-mail",
     zh: "输入你的电子邮件地址",
     ar: "أدخل عنوان بريدك الإلكتروني",

@@ -511,7 +511,7 @@ export const TRANSLATIONS_EN = {
           fullName: "Full Name",
           fullNamePlaceholder: "Enter your Name",
           emailAddress: "Email Address",
-          emailAddressPlaceholder: "Enter you email address",
+          emailAddressPlaceholder: "Enter your email address",
           password: "Password",
           inputPassword: "Enter a password"
         }
