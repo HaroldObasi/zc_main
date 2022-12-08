@@ -477,7 +477,7 @@ export const TRANSLATIONS_EN = {
       form: {
         header: "Login",
         sub_header: "Login with the data you entered during your registration",
-        google_header: "Login with Google",
+        google_header: "Continue with Google",
         topline_text: "OR",
         submitButtonName: "Log in",
         bottomLine: "Do not have an account?",
@@ -502,7 +502,7 @@ export const TRANSLATIONS_EN = {
       title: "Sign Up",
       form: {
         header: "Create Account",
-        googleHeader: "Sign up with Google",
+        googleHeader: "Continue with Google",
         topLineText: "OR",
         submitButtonName: "Sign up",
         bottomLine: "Already have an account?",

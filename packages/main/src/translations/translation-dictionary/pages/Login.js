@@ -43,10 +43,10 @@ export default [
   },
   {
     key: "google_header",
-    en: "Login with Google",
+    en: "Continue with Google",
     de: "Anmeldung mit Google",
     nl: "Inloggen met Google",
-    engb: "Login with Google",
+    engb: "Continue with Google",
     fr: "Connectez-vous avec Google",
     zh: "用谷歌登录",
     ar: "تسجيل الدخول باستخدام جوجل",

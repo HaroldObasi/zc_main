@@ -13,7 +13,7 @@ const GoogleAuth = ({ className, googleHeader, google, setLoading }) => {
   // const navigate = useNavigate()
   let auth = useAuth();
   const onSuccess = res => {
-    if (googleHeader === "Sign up with Google") {
+    if (googleHeader === "Continue with Google") {
       axios
         .get(`${BASE_API_URL}/auth/social-login/google/${res.accessToken}`)
         .then(res => {

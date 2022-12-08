@@ -10,7 +10,7 @@ const CLIENT_ID =
 const GoogleAuth = ({ className, googleHeader, google, setLoading }) => {
   const history = useHistory();
   const onSuccess = res => {
-    if (googleHeader === "Sign up with Google") {
+    if (googleHeader === "Continue with Google") {
       axios
         .get(`${BASE_URL}/auth/social-login/google/${res.accessToken}`)
         .then(res => {

@@ -29,10 +29,10 @@ export default [
   },
   {
     key: "google_header",
-    en: "Sign up with Google",
+    en: "Continue with Google",
     de: "Anmeldung bei Google",
     nl: "Aanmelden bij Google",
-    engb: "Sign up with Google",
+    engb: "Continue with Google",
     fr: "S'inscrire avec Google",
     zh: "在谷歌上注册",
     ar: "الاشتراك مع جوجل",
